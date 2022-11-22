@@ -2,14 +2,20 @@
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
 int lenght = AskIntNumber("Введите длину массива: ");
-int[] array = AskIntArray(lenght);
-PrintArray(array);
+if (lenght > 0)
+{
+    int[] array = AskIntArray(lenght);
+    PrintArray(array);
+}
+else
+    Console.WriteLine("Неверная длина массива");
+
 
 int[] AskIntArray(int count)
 {
     int[] array = new int[count];
     for (int i = 0; i < count; i++)
-        array[i] = AskIntNumber($"Введите {i+1} число:");
+        array[i] = AskIntNumber($"Введите {i + 1} число:");
     return array;
 }
 
